@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Edu+TAS+Beginner&family=Inter:wght@300&family=Krub:wght@300&family=Lora&family=Merriweather:wght@700&family=Nunito:ital,wght@1,200&family=Roboto+Condensed:wght@300&family=Updock&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&family=Josefin+Slab:wght@500&family=Lexend+Deca:wght@300&family=Parisienne&family=Tangerine:wght@700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.headContainer{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: visible;
+    -ms-overflow-style:none;
+    scrollbar-width: none;
+}
+
+.headContainer::-webkit-scrollbar{
+    width: 0px;
+}
+
+
+
+
+/* Heder Division styling */
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    /* background-color: #57a958; */
+    background-color: #ef233c;
+}
+
+.header p{
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 4px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.themeDivisionInHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+}
+
+
+
+
+/* Control panal styling */
+
+
+.control-panel {
+    background: lightgray;
+    text-align: right;
+    padding: 4px;
+    font-family: sans-serif;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+
+
+
+/* Font division styling */
+
+
+
+.fontSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+label{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#fontInput{
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    width: 70px;
+    outline: none;
+    cursor: pointer;
+    padding: 2px 2px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+#fontInput::-webkit-outer-spin-button,#fontInput::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.manualFont{
+    width: 70px;
+    cursor: pointer;
+}
+
+.manualFont option{
+    width: 70px;
+    cursor: pointer;
+}
+
+
+
+/* Theme division styling */
+
+
+.themeDivision{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.editorTheme{
+    background: white;
+    border: 1px solid gray;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    outline: none;
+    padding: 3px 2px;
+    border-radius: 4px;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+
+.editorTheme option{
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+
+
+/* language division styling */
+
+.languageDivision{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.languages {
+    background: white;
+    border: 1px solid gray;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 3px 2px;
+    border-radius: 4px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.languages option{
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+#editor {
+    height: 61vh;
+    font-size: 16px;
+    border: 1px solid black;
+}
+
+.button-container {
+    text-align: right;
+    padding: 4px;
+    margin-right: 1%;
+}
+
+.btn {
+    /* background-color: #57a958; */
+    background-color: #ef233c;
+    color: white;
+    padding: 8px 15px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.btn:active {
+    transform: scale(0.9);
+    background-color: #ef5769;
+    transition-property: transform;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.mainEditor{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.hiddenOutputText{
+    font-size: 150px;
+    font-weight: bolder;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Lexend Deca', sans-serif;
+    /* font-family: 'Josefin Slab', serif; */
+    /* font-family: 'El Messiri', sans-serif; */
+    /* font-family: 'Tangerine', cursive; */
+    /* font-family: 'Parisienne', cursive; */
+    cursor: pointer;
+    position: absolute;
+    margin: auto;
+    z-index: -1;
+    color: rgb(226, 223, 223);
+    text-shadow: 5px 5px 5px #ef233c;
+    padding: 20px;
+    opacity: 0.3;
+}
+
+.output {
+    padding: 4px;
+    border: 2px solid gray;
+    min-height: 20vh;
+    max-height: 100vh;
+    overflow: auto;
+    width: 99vw;
+    text-align: left;
+    margin: 5px 6px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    z-index: 1;
+}
+
+.iframeTag{
+    padding: 4px;
+    border: 2px solid gray;
+    height: 97vh;
+    overflow: auto;
+    width: 99vw;
+    text-align: left;
+    margin: 5px 6px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    display: none;
+    background: transparent;
+    z-index: 1;
+}
+
+
+/* Styling for developer section */
+
+.developerSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: #4e5561;
+    margin-top: 20px;
+}
+
+.devloperImages{
+    margin: 60px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#devloperHeading{
+    font-size: 30px;
+    font-family: 'Merriweather', Courier;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.devloperImages p{
+    font-size: 22px;
+    font-family: 'Inter', cursive;
+    cursor: pointer;
+}
+
+.images{  
+    margin-top: 12px;
+    width: 222px;
+    height: 236px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+
+    transition-property: scroll-behavior;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
+.images::-webkit-scrollbar{
+    width: 0px;
+}
+
+.images img{
+    box-shadow: 0px 0px 5px 2px rgb(148, 125, 125);
+    max-width: 201px;
+    min-width: 200px;
+    max-height: 201px;
+    min-height: 200px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.developerSection p{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    line-height: 25px;
+    text-align: center;
+    padding: 0px 3px;
+}
+
+
+.extraDiv{
+    display: none;
+}
+
+
+
+
+
+@media (max-width:650px){
+    .control-panel{
+        justify-content: center;
+    }
+
+    .hiddenOutputText{
+        font-size: 120px;
+    }
+}
+
+@media (max-width:580px){
+    .header{
+        position: relative;
+    }
+
+    .themeDivisionInHeader{
+        display: block;
+        position: absolute;
+        right: 5px;
+    }
+
+    .themeLabel{
+        display: none;
+    }
+
+    .themeDivision{
+        display: none;
+    }
+
+    .control-panel{
+        height: 20px;
+        position: relative;
+    }
+
+    .fontSection{
+        position: absolute;
+        left: 5px;
+    }
+
+    .languageDivision{
+        position: absolute;
+        right: 5px;
+    }
+
+    .hiddenOutputText{
+        font-size: 100px;
+    }
+}
+
+@media (max-width:400px){
+    #devloperHeading{
+        font-size: 20px;
+    }
+
+    .developerSection p{
+        font-size: 12px;
+    }
+
+    .hiddenOutputText{
+        font-size: 80px;
+    }
+}
+
+@media (max-width:350px){
+    .header{
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        height: 60px;
+    }
+
+    .header p{
+        margin-left: 0px;
+    }
+
+    .themeDivisionInHeader{
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 5px;
+    }
+}
+
+@media (max-width:310px){
+    label{
+        display: none;
+    }
+}
+
+
+
+/* Second UI of this code editor  just commeni upper media queries and remove the follwing comment section code*/
+
+/* 
+
+@media (max-width:600px) {
+    label{
+        display: none;
+    }
+}
+
+@media (max-width:500px) {
+    .control-panel{
+        justify-content: center;
+    }
+}
+
+@media (max-width:390px) {
+    .control-panel{
+        align-items: flex-start;
+        height: 50px;
+        position: relative;
+    }
+
+    .fontSection{
+        position: absolute;
+        left: 0;
+    }
+
+    .themeDivision{
+        position: absolute;
+        bottom: 5px;
+    }
+
+    .languageDivision{
+        position: absolute;
+        right: 0;
+    }
+} */

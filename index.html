@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome In CodingTutorial</title>
+
+    <link rel="stylesheet" href="allLanguageCompilerDesign.css">
+</head>
+<body>
+    
+    <div class="headContainer">
+        <div class="header">
+            <p>CodingTutorial</p>
+            <div class="themeDivisionInHeader">
+                <label class="themeLabel">Theme :</label>
+                <select name="editorTheme" id="editorThemeIdInHeader" class="editorTheme" onchange="themeChangeInHeader()">
+                    <option selected>Theme</option>
+                    <option value="monokai">Monokai</option>
+                    <option value="ambiance">Ambiance</option>
+                    <option value="chaos">Chaos</option>
+                    <option value="chrome">Chrome</option>
+                    <option value="cloud9_day">Cloud9 Day</option>
+                    <option value="cloud9_night_low_color">Cloud9 Night Low Color</option>
+                    <option value="cloud9_night">Cloud9 Night</option>
+                    <option value="clouds_midnight">Clouds Midnight</option>
+                    <option value="clouds">Clouds</option>
+                    <option value="cobalt">Cobalt</option>
+                    <option value="crimson_editor">Crimson Editor</option>
+                    <option value="dawn">Dawn</option>
+                    <option value="dracula">Dracula</option>
+                    <option value="dreamweaver">Dreamweaver</option>
+                    <option value="eclipse">Eclipse</option>
+                    <option value="github">Github</option>
+                    <option value="gob">Gob</option>
+                    <option value="gruvbox_dark_hard">Gruvbox Dark Hard</option>
+                    <option value="gruvbox_light_hard">Gruvbox Light Hard</option>
+                    <option value="gruvbox">gruvbox</option>
+                    <option value="idle_fingers">Idle Fingers</option>
+                    <option value="iplastic">Iplastic</option>
+                    <option value="katzenmilch">Katzenmilch</option>
+                    <option value="kr_theme">KR Theme</option>
+                    <option value="kuroir">Kuroir</option>
+                    <option value="merbivore">Merbivore</option>
+                    <option value="mono_industrial">Mono Industrial</option>
+                    <option value="nord_dark">Nord Dark</option>
+                    <option value="one_dark">One Dark</option>
+                    <option value="pastel_on_dark">Pastel On Dark</option>
+                    <option value="solarized_dark">Solarized Dark</option>
+                    <option value="solarized_light">Solarized Light</option>
+                    <option value="sqlserver">SQLserver</option>
+                    <option value="terminal">Terminal</option>
+                    <option value="textmate">Textmate</option>
+                    <option value="tomorrow_night_blue">Tomorrow Night Blue</option>
+                    <option value="tomorrow_night_bright">Tomorrow Night Bright</option>
+                    <option value="tomorrow_night_eighties">Tomorrow Night Eighties</option>
+                    <option value="tomorrow_night">Tomorrow Night</option>
+                    <option value="tomorrow">Tomorrow</option>
+                    <option value="twilight">Twilight</option>
+                    <option value="vibrant_ink">Vibrant_Ink</option>
+                    <option value="xcode">Xcode</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="control-panel">
+            <div class="fontSection">
+                <label id="fontLabel">Size :</label>
+                <input type="number" id="fontInput" list="manualFontId" name="datalistInput" placeholder="Size" min="2"
+                    max="999" onchange="fontChange()">
+                <datalist id="manualFontId" class="manualFont">
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                </datalist>
+            </div>
+    
+            <div class="themeDivision">
+                <label>Theme :</label>
+                <select name="editorTheme" id="editorThemeId" class="editorTheme" onchange="themeChange()">
+                    <option selected>Theme</option>
+                    <option value="monokai">Monokai</option>
+                    <option value="ambiance">Ambiance</option>
+                    <option value="chaos">Chaos</option>
+                    <option value="chrome">Chrome</option>
+                    <option value="cloud9_day">Cloud9 Day</option>
+                    <option value="cloud9_night_low_color">Cloud9 Night Low Color</option>
+                    <option value="cloud9_night">Cloud9 Night</option>
+                    <option value="clouds_midnight">Clouds Midnight</option>
+                    <option value="clouds">Clouds</option>
+                    <option value="cobalt">Cobalt</option>
+                    <option value="crimson_editor">Crimson Editor</option>
+                    <option value="dawn">Dawn</option>
+                    <option value="dracula">Dracula</option>
+                    <option value="dreamweaver">Dreamweaver</option>
+                    <option value="eclipse">Eclipse</option>
+                    <option value="github">Github</option>
+                    <option value="gob">Gob</option>
+                    <option value="gruvbox_dark_hard">Gruvbox Dark Hard</option>
+                    <option value="gruvbox_light_hard">Gruvbox Light Hard</option>
+                    <option value="gruvbox">gruvbox</option>
+                    <option value="idle_fingers">Idle Fingers</option>
+                    <option value="iplastic">Iplastic</option>
+                    <option value="katzenmilch">Katzenmilch</option>
+                    <option value="kr_theme">KR Theme</option>
+                    <option value="kuroir">Kuroir</option>
+                    <option value="merbivore">Merbivore</option>
+                    <option value="mono_industrial">Mono Industrial</option>
+                    <option value="nord_dark">Nord Dark</option>
+                    <option value="one_dark">One Dark</option>
+                    <option value="pastel_on_dark">Pastel On Dark</option>
+                    <option value="solarized_dark">Solarized Dark</option>
+                    <option value="solarized_light">Solarized Light</option>
+                    <option value="sqlserver">SQLserver</option>
+                    <option value="terminal">Terminal</option>
+                    <option value="textmate">Textmate</option>
+                    <option value="tomorrow_night_blue">Tomorrow Night Blue</option>
+                    <option value="tomorrow_night_bright">Tomorrow Night Bright</option>
+                    <option value="tomorrow_night_eighties">Tomorrow Night Eighties</option>
+                    <option value="tomorrow_night">Tomorrow Night</option>
+                    <option value="tomorrow">Tomorrow</option>
+                    <option value="twilight">Twilight</option>
+                    <option value="vibrant_ink">Vibrant_Ink</option>
+                    <option value="xcode">Xcode</option>
+                </select>
+            </div>
+            
+            <div class="languageDivision">
+                <label>Language : </label>
+                <select id="languages" class="languages" onchange="changeLanguage()">
+                    <option value="html" selected>HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                </select>
+            </div>
+    
+        </div>
+    
+        <div class="editor" id="editor">
+    
+        </div>
+    
+        <div class="button-container">
+            <button class="btn" onclick="executeCode()">Run</button>
+        </div>
+    
+        <div class="mainEditor">
+            <p class="hiddenOutputText" id="hiddenOutputTextId">M</p>
+            <div class="output" id="outputId">
+    
+            </div>
+    
+            <iframe class="iframeTag" id="iframeTagId">
+    
+            </iframe>
+        </div>
+
+        <div class="developerSection">
+            <div class="devloperImages">
+                <p id="devloperHeading">Designer & Developer</p>
+                <div class="images" id="imagesId">
+                    <img src="Project_All_Images/developerImage3.jpeg" alt="SamImage_3">
+                    <img src="Project_All_Images/developerImage1.jpeg" alt="SamImage_1">
+                    <img src="Project_All_Images/developerImage2.jpeg" alt="SamImage_2">
+                    <img src="Project_All_Images/developerImage6.jpeg" alt="SamImage_5">
+                </div>
+                <p>Sambhaji Shinde</p>
+            </div>
+            <p>Copyright © CodingTutorial 2022 for developers and begginers in coding</p>
+            <p style="margin-bottom: 40px;">Developed By : Sambhaji Sitaram Shinde (Engineering Student Of Information Technology)</p>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="acejsfiles/ace.js"></script>
+    <!-- <script src="acejsfiles/theme-tomorrow.js"></script> -->
+    <script src="allLanguageCompilerScript.js"></script>
+        
+    <div class="extraDiv" id="extraDivId">
+        
+    </div>
+
+</body>
+</html>
